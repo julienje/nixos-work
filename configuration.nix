@@ -32,18 +32,20 @@
     font = "Lat2-Terminus16";
     useXkbConfig = true; # use xkb.options in tty.
   };
-  services.xserver = {
-    enable = true;
-    xkb = {
-      layout = "ch";
-      variant = "fr";
-    };
-    desktopManager = {
-      gnome = {
-        enable = true;
+  services = {
+    xserver = {
+      enable = true;
+      xkb = {
+        layout = "ch";
+        variant = "fr";
       };
+      desktopManager = {
+        gnome = {
+          enable = true;
+        };
+      };
+      displayManager.gdm.enable = true;
     };
-    displayManager.gdm.enable = true;
     gnome = {
       core-utilities.enable = false;
     };
