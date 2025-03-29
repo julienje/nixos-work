@@ -17,6 +17,8 @@
         # so the old configuration file still takes effect
         ./configuration.nix
         ./modules/packages.nix
+        ./modules/graalvm.nix
+        ./modules/custom.nix
       ];
     };
   };

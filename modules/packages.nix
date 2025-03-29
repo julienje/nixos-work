@@ -11,6 +11,5 @@
     pkgs.jetbrains.idea-ultimate
     pkgs.chromium
     pkgs.nodejs_22
-    pkgs.guake
   ];
 }
