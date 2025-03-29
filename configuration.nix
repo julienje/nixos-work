@@ -46,7 +46,7 @@
     displayManager.gdm.enable = true;
     gnome = {
       core-utilities.enable = false;
-    }
+    };
   };
 
   # Enable touchpad support (enabled default in most desktopManager).
