@@ -51,13 +51,12 @@
     };
   };
 
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.libinput.enable = true;
+  virtualisation.docker.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.julien = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "docker" ]; # Enable ‘sudo’ for the user.
     openssh.authorizedKeys.keys = [ "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIP940HJD23lm9uI507F7xzUqd2CLBigDmnruDq6/OtmZ julien.jeanneret2@sbb.ch" ];
   };
 

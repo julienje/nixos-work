@@ -9,5 +9,7 @@
     pkgs.brave
     pkgs.maven
     pkgs.jetbrains.idea-ultimate
+    pkgs.chromium
+    pkgs.nodejs_22
   ];
 }
