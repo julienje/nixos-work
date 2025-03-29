@@ -10,7 +10,4 @@
     pkgs.maven
     pkgs.jetbrains.idea-ultimate
   ];
-
-  environment.systemPackages = with nixpkgs-pgraalvm.legacyPackages.aarch64-linux; [ graalvm-ce ];
-
 }
