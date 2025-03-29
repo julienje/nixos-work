@@ -16,7 +16,7 @@
         "type": "github"
       }
     },
-    "nixpkgs-pgraalvm": {
+    "nixpkgs-pinneda": {
       "locked": {
         "lastModified": 1708814358,
         "narHash": "sha256-mYJwTy2TNTOXbxVtmhXDv98F2ORhxRzL1S6yw1+1G20=",
@@ -35,7 +35,7 @@
     "root": {
       "inputs": {
         "nixpkgs": "nixpkgs",
-        "nixpkgs-pgraalvm": "nixpkgs-pgraalvm"
+        "nixpkgs-pinneda": "nixpkgs-pinneda"
       }
     }
   },
