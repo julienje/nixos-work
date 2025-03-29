@@ -14,7 +14,7 @@
       specialArgs = { 
         pkgs-pinneda = import nixpkgs-pinneda {
           inherit system;
-          config.allowUnfree = true
+          config.allowUnfree = true;
         };
        };
       modules = [
