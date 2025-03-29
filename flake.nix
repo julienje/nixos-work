@@ -9,7 +9,7 @@
 
   outputs = { self, nixpkgs, nixpkgs-pinneda, ... }@inputs: {
     # Please replace my-nixos with your hostname
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem rec {
       system = "aarch64-linux";
       specialArgs = { 
         pkgs-pinneda = import nixpkgs-pinneda {
