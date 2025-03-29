@@ -1,5 +1,5 @@
-{ pkgs, ... }:
+{ pkgs, pkgs-pinneda, ... }:
 
 {
-  environment.systemPackages = with nixpkgs-pgraalvm.legacyPackages.aarch64-linux; [ graalvm-ce ];
+  environment.systemPackages = with pkgs-pinneda; [ graalvm-ce ];
 }
