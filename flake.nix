@@ -15,7 +15,7 @@
         pkgs-pinneda = import nixpkgs-pinneda {
           inherit system;
           config.allowUnfree = true
-        }
+        };
        };
       modules = [
         # Import the previous configuration.nix we used,
