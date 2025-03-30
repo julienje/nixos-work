@@ -44,8 +44,16 @@
           enable = true;
         };
       };
-      displayManager.gdm.enable = true;
+      displayManager = {
+        gdm.enable = true;
+      }; 
     };
+    displayManager = {
+      autoLogin = {
+        enable = true;
+        user = "julien";
+      };
+    }; 
     gnome = {
       core-utilities.enable = false;
     };
