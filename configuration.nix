@@ -39,23 +39,25 @@
         layout = "ch";
         variant = "fr";
       };
+      windowManager.i3 = {
+        enable = true;
+        extraPackages = with pkgs; [
+          i3status
+          rofi
+        ];
+      };
       desktopManager = {
-        gnome = {
+        xterm.enable = false;
+        xfce = {
           enable = true;
+          noDesktop = true;
+          enableXfwm = false;
         };
       };
       displayManager = {
-        gdm.enable = true;
-      }; 
-    };
-    displayManager = {
-      autoLogin = {
-        enable = true;
-        user = "julien";
+        lightdm.enable = true;
+        defaultSession = "xfce+i3";
       };
-    }; 
-    gnome = {
-      core-utilities.enable = false;
     };
   };
 
