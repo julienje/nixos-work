@@ -32,37 +32,6 @@
     font = "Lat2-Terminus16";
     useXkbConfig = true; # use xkb.options in tty.
   };
-  services = {
-    xserver = {
-      enable = true;
-      xkb = {
-        layout = "ch";
-        variant = "fr";
-      };
-      windowManager.i3 = {
-        enable = true;
-        extraPackages = with pkgs; [
-          i3status
-          dmenu
-        ];
-      };
-      desktopManager = {
-        xterm.enable = false;
-        xfce = {
-          enable = true;
-          noDesktop = true;
-          enableXfwm = false;
-        };
-      };
-    };
-    displayManager = {
-      defaultSession = "xfce+i3";
-      autoLogin = {
-        enable = true;
-        user = "julien";
-      };
-    };
-  };
 
   virtualisation.docker.enable = true;
 
