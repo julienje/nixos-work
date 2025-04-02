@@ -43,7 +43,7 @@
         enable = true;
         extraPackages = with pkgs; [
           i3status
-          rofi
+          demnu
         ];
       };
       desktopManager = {
@@ -54,9 +54,12 @@
           enableXfwm = false;
         };
       };
-      displayManager = {
-        lightdm.enable = true;
-        defaultSession = "xfce+i3";
+    };
+    displayManager = {
+      defaultSession = "xfce+i3";
+      autoLogin = {
+        enable = true;
+        user = "julien";
       };
     };
   };
