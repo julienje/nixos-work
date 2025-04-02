@@ -43,7 +43,7 @@
         enable = true;
         extraPackages = with pkgs; [
           i3status
-          demnu
+          dmenu
         ];
       };
       desktopManager = {
