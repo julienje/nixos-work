@@ -7,11 +7,6 @@
 {
   services = {
     xserver = {
-      desktopManager = {
-        plasma5 = {
-          enable = true;
-        };
-      };
       enable = true;
       xkb = {
         layout = "ch";
@@ -21,11 +16,18 @@
     displayManager = {
       sddm =  {
         enable = true;
+        wayland.enable = true;
+        settings.General.DisplayServer = "wayland";
       };
       autoLogin = {
         enable = true;
         user = "julien";
       };
+    }; 
+    desktopManager = {
+        plasma6 = {
+          enable = true;
+        };
     };
   };
 }

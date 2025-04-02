@@ -21,7 +21,7 @@
         # Import the previous configuration.nix we used,
         # so the old configuration file still takes effect
         ./configuration.nix
-        ./kde.nix
+        ./i3.nix
         ./modules/packages.nix
         ./modules/graalvm.nix
         ./modules/custom.nix
