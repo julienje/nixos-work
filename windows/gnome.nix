@@ -8,6 +8,7 @@
   services = {
     xserver = {
       enable = true;
+      excludePackages = with pkgs; [xterm];
       xkb = {
         layout = "ch";
         variant = "fr";
@@ -27,9 +28,28 @@
         user = "julien";
       };
     }; 
-    gnome = {
-      core-utilities.enable = false;
-    };
   };
+  environment = {
+    gnome = {
+      excludePackages = with pkgs; [
+        atomix
+        cheese
+        epiphany
+        evince
+        geary
+        gnome-characters
+        gnome-music
+        gnome-photos
+        gnome-tour
+        hitori
+        iagno
+        tali
+        totem
+      ];
+    };
+    systemPackages = with pkgs.gnome; [
+      gnome-tweaks
+    ];
+   };
 }
 
