@@ -37,10 +37,16 @@
         epiphany
         evince
         geary
+        gnome-calculator
+        gnome-calendar
         gnome-characters
+        gnome-contacts
+        gnome-maps
         gnome-music
         gnome-photos
+        gnome-text-editor
         gnome-tour
+        gnome-weather
         hitori
         iagno
         tali
@@ -52,4 +58,3 @@
     ];
    };
 }
-
