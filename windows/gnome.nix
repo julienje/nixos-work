@@ -47,7 +47,7 @@
         totem
       ];
     };
-    systemPackages = with pkgs.gnome; [
+    systemPackages = with pkgs; [
       gnome-tweaks
     ];
    };
