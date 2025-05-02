@@ -5,7 +5,7 @@
     # NixOS official package source, using the nixos-24.11 branch here
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-pinneda.url = "github:NixOS/nixpkgs/336eda0d07dc5e2be1f923990ad9fdb6bc8e28e3";
-    home-manager.url = "github:nix-community/home-manager/release-24.05";
+    home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
   };
