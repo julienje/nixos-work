@@ -7,7 +7,7 @@
   # basic configuration of git, please change to your own
   programs.git = {
     enable = true;
-    userName = "Julien Jeanneret;
+    userName = "Julien Jeanneret";
     userEmail = "julien.jeanneret@outlook.com";
   };
 
