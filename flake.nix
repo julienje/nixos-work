@@ -10,7 +10,7 @@
 
   };
 
-  outputs = { self, nixpkgs, nixpkgs-pinneda, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, nixpkgs-pinneda, ... }@inputs: {
 
     nixosConfigurations.vm-sbb = nixpkgs.lib.nixosSystem rec {
       system = "aarch64-linux";
