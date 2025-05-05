@@ -6,7 +6,12 @@
   environment.systemPackages = with pkgs; [
     vscode
     maven
-    jetbrains.idea-ultimate
+    #jetbrains.idea-ultimate
+    (jetbrains.plugins.addPlugins jetbrains.idea-ultimate [
+      "github-copilot"
+      "gittoolbox"
+      "key-promoter-x"
+    ])
     nodejs_22
   ];
 }
