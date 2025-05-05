@@ -10,6 +10,7 @@
       ../../modules/vm-system.nix
       ../../modules/vm-sbb.nix
       ../../modules/graalvm.nix
+      ../../windows/gnome.nix
       ./hardware-configuration.nix
     ];
   # Use the systemd-boot EFI boot loader.
