@@ -3,11 +3,13 @@
 {
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  boot.loader.systemd-boot.configurationLimit = 10;
+
   # do garbage collection to keep disk usage low
   nix.gc = {
-    automatic = lib.mkDefault true;
-    dates = lib.mkDefault "monthly";
-    options = lib.mkDefault "--delete-older-than 1m";
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 1w";
   };
 
   # Allow unfree packages
