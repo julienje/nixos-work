@@ -17,7 +17,7 @@
       color-scheme = "prefer-dark";
     };
     "org/gnome/desktop/peripherals/mouse" = {
-      natural-scroll = false;
+      natural-scroll = true;
     };
     "org/gnome/desktop/session" = {
       idle-delay = lib.hm.gvariant.mkUint32 0;
