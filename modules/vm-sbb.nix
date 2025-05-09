@@ -12,6 +12,7 @@
       "gittoolbox"
       "key-promoter-x"
     ])
+    jetbrains-toolbox
     nodejs_22
   ];
 }
