@@ -29,7 +29,7 @@
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.users.julien = ./home/home-perso.nix;
+          home-manager.users.julien = ./home/home-sbb.nix;
 
           # Optionally, use home-manager.extraSpecialArgs to pass
           # arguments to home.nix

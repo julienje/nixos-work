@@ -49,6 +49,8 @@
         gnome-weather
         hitori
         iagno
+        simple-scan
+        snapshot
         tali
         totem
       ];
