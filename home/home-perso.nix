@@ -22,6 +22,15 @@
     "org/gnome/desktop/session" = {
       idle-delay = lib.hm.gvariant.mkUint32 0;
     };
+    "org/gnome/shell/session" = {
+      favorite-apps = [
+        "org.gnome.Nautilus.desktop"
+        "org.gnome.Console.desktop"
+        "brave-browser.desktop"
+        "chromium-browser.desktop"
+        "code.desktop"
+        ];
+    };
   };
 
   # This value determines the home Manager release that your
