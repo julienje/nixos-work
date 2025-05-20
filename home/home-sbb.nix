@@ -11,6 +11,23 @@
     userEmail = "julien.jeanneret2@sbb.ch";
   };
 
+  programs.vscode = {
+    enable = true;
+    profiles.default = {
+      #enableExtensionUpdateCheck = false;
+      #enableUpdateCheck = false;
+      # see https://code.visualstudio.com/docs/getstarted/settings#_settingsjson
+      userSettings = {
+        #"files.autoSave" = "afterDelay";
+        #"files.autoSaveDelay" = 100;
+      };
+
+      extensions = with pkgs.vscode-extensions; [
+         jnoortheen.nix-ide
+      ];
+    };
+  };
+
   # Use `dconf watch /` to track stateful changes you are doing, then set them here.
   dconf.settings = {
     "org/gnome/desktop/interface" = {

@@ -1,4 +1,4 @@
-{ lib, pkgs, ... }:
+{ lib, pkgs,  nix-vscode-extensions, ... }:
 
 {
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -16,6 +16,10 @@
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
+
+  nixpkgs.overlays = [
+    nix-vscode-extensions.overlays.default
+  ];
 
   #  Set your time zone.
   time.timeZone = "Europe/Zurich";
@@ -39,10 +43,14 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    git
     brave
     chromium
+    xdg-utils
   ];
+
+  programs.chromium = {
+    enable = true;
+  };
 
   services = {
       openssh.enable = true;

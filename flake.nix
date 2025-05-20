@@ -7,7 +7,7 @@
     nixpkgs-pinneda.url = "github:NixOS/nixpkgs/336eda0d07dc5e2be1f923990ad9fdb6bc8e28e3";
     home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-
+    nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
   };
 
   outputs = { self, nixpkgs, home-manager, nixpkgs-pinneda, ... }@inputs: {
@@ -19,7 +19,7 @@
           inherit system;
           config.allowUnfree = true;
         };
-       };
+      };
       modules = [
         # Import the previous configuration.nix we used,
         # so the old configuration file still takes effect
