@@ -20,6 +20,7 @@
       userSettings = {
         "files.autoSave" = "afterDelay";
         "files.autoSaveDelay" = 100;
+        "git.autofetch" = true;
       };
 
       extensions = with pkgs.vscode-extensions; [
