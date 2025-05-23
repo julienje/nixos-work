@@ -15,5 +15,6 @@
       "key-promoter-x"
     ])
     dotnetCorePackages.sdk_9_0-bin
+    nodejs_22
   ];
 }
