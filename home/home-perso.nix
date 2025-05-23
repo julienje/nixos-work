@@ -23,9 +23,13 @@
         "git.autofetch" = true;
       };
 
-      extensions = with pkgs.vscode-marketplace; [
+      # maybe someday with pkgs.vscode-marketplace
+      extensions = with pkgs.vscode-extensions; [
         # Search for vscode-extensions on https://search.nixos.org/packages
         jnoortheen.nix-ide
+        github.copilot-chat
+        github.copilot
+        github.vscode-pull-request-github
       ];
     };
   };
