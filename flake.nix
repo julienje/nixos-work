@@ -10,7 +10,7 @@
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
   };
 
-  outputs = { self, nixpkgs, home-manager, nixpkgs-pinneda, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, nixpkgs-pinneda,  nix-vscode-extensions, ... }@inputs: {
 
     nixosConfigurations.vm-sbb = nixpkgs.lib.nixosSystem rec {
       system = "aarch64-linux";
@@ -43,6 +43,12 @@
         # Import the previous configuration.nix we used,
         # so the old configuration file still takes effect
         ./hosts/vm-perso
+        
+        {
+          nixpkgs.overlays = [
+            nix-vscode-extensions.overlays.default
+          ];
+        }
 
         home-manager.nixosModules.home-manager
         {

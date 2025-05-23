@@ -23,8 +23,9 @@
         "git.autofetch" = true;
       };
 
-      extensions = with pkgs.vscode-extensions; [
-         jnoortheen.nix-ide
+      extensions = with pkgs.vscode-marketplace; [
+        # Search for vscode-extensions on https://search.nixos.org/packages
+        jnoortheen.nix-ide
       ];
     };
   };
