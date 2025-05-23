@@ -14,12 +14,12 @@
   programs.vscode = {
     enable = true;
     profiles.default = {
-      #enableExtensionUpdateCheck = false;
-      #enableUpdateCheck = false;
+      enableExtensionUpdateCheck = false;
+      enableUpdateCheck = false;
       # see https://code.visualstudio.com/docs/getstarted/settings#_settingsjson
       userSettings = {
-        #"files.autoSave" = "afterDelay";
-        #"files.autoSaveDelay" = 100;
+        "files.autoSave" = "afterDelay";
+        "files.autoSaveDelay" = 100;
       };
 
       extensions = with pkgs.vscode-extensions; [
@@ -34,18 +34,17 @@
       color-scheme = "prefer-dark";
     };
     "org/gnome/desktop/peripherals/mouse" = {
-      natural-scroll = true;
+      natural-scroll = false;
     };
     "org/gnome/desktop/session" = {
       idle-delay = lib.hm.gvariant.mkUint32 0;
     };
-    "org/gnome/shell/session" = {
+    "org/gnome/shell" = {
       favorite-apps = [
         "org.gnome.Nautilus.desktop"
         "org.gnome.Console.desktop"
         "brave-browser.desktop"
         "chromium-browser.desktop"
-        "idea-ultimate.desktop"
         "code.desktop"
         ];
     };

@@ -34,12 +34,12 @@
       color-scheme = "prefer-dark";
     };
     "org/gnome/desktop/peripherals/mouse" = {
-      natural-scroll = true;
+      natural-scroll = false;
     };
     "org/gnome/desktop/session" = {
       idle-delay = lib.hm.gvariant.mkUint32 0;
     };
-    "org/gnome/shell/session" = {
+    "org/gnome/shell" = {
       favorite-apps = [
         "org.gnome.Nautilus.desktop"
         "org.gnome.Console.desktop"
