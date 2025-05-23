@@ -1,4 +1,4 @@
-{ lib, pkgs,  nix-vscode-extensions, ... }:
+{ lib, pkgs, ... }:
 
 {
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -16,10 +16,6 @@
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
-
-  nixpkgs.overlays = [
-    nix-vscode-extensions.overlays.default
-  ];
 
   #  Set your time zone.
   time.timeZone = "Europe/Zurich";
