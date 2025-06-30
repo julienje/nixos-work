@@ -50,7 +50,7 @@
       "go-template"
       "key-promoter-x"
       "maven-helper"
-      "multi-project-workspace"
+      # "multi-project-workspace"
     ])
     jetbrains-toolbox
     nodejs_22
