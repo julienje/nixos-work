@@ -7,19 +7,18 @@
   imports =
     [ (modulesPath + "/profiles/qemu-guest.nix")
     ];
-
-  boot.initrd.availableKernelModules = [ "xhci_pci" "sr_mod" ];
+  boot.initrd.availableKernelModules = [ "xhci_pci" "nvme" "sr_mod" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/32ae09b4-20ef-4132-9c4b-ecc28868b0fa";
+    { device = "/dev/disk/by-label/nixos";
       fsType = "ext4";
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/64C2-ABA7";
+    { device = "/dev/disk/by-label/boot";
       fsType = "vfat";
       options = [ "fmask=0022" "dmask=0022" ];
     };
@@ -34,4 +33,5 @@
   # networking.interfaces.enp0s1.useDHCP = lib.mkDefault true;
 
   nixpkgs.hostPlatform = lib.mkDefault "aarch64-linux";
+  virtualisation.vmware.guest.enable = true;
 }

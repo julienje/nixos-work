@@ -30,7 +30,7 @@
   virtualisation.docker.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.julien = {
+  users.users.u231154 = {
     isNormalUser = true;
     extraGroups = [ "wheel" "docker" ]; # Enable ‘sudo’ for the user.
     openssh.authorizedKeys.keys = [ "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIP940HJD23lm9uI507F7xzUqd2CLBigDmnruDq6/OtmZ julien.jeanneret2@sbb.ch" ];
@@ -40,8 +40,20 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     brave
-    chromium
     xdg-utils
+    maven
+    (jetbrains.plugins.addPlugins jetbrains.idea-ultimate [
+      "cucumber-for-java"
+      "gherkin"
+      "github-copilot"
+      "gittoolbox"
+      "go-template"
+      "key-promoter-x"
+      "maven-helper"
+      "multi-project-workspace"
+    ])
+    jetbrains-toolbox
+    nodejs_22
   ];
 
   programs.chromium = {

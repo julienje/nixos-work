@@ -25,7 +25,7 @@
     displayManager = {
       autoLogin = {
         enable = false;
-        user = "julien";
+        user = "u231154";
       };
     }; 
   };

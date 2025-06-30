@@ -8,16 +8,14 @@
   imports =
     [ # Include the results of the hardware scan.
       ../../modules/vm-system.nix
-      ../../modules/vm-perso.nix
       ../../windows/gnome.nix
       ./hardware-configuration.nix
     ];
-  
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "vm-perso"; # Define your hostname
+  networking.hostName = "vmware-sbb"; # Define your hostname.  
 
   # This option defines the first version of NixOS you have installed on this particular machine,
   # and is used to maintain compatibility with application data (e.g. databases) created on older NixOS versions.

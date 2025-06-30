@@ -1,8 +1,8 @@
 { lib, config, pkgs, ... }:
 
 {
-  home.username = "julien";
-  home.homeDirectory = "/home/julien";
+  home.username = "u231154";
+  home.homeDirectory = "/home/u231154";
 
   # basic configuration of git, please change to your own
   programs.git = {
