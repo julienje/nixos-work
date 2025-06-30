@@ -40,8 +40,6 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     brave
-    xdg-utils
-    maven
     (jetbrains.plugins.addPlugins jetbrains.idea-ultimate [
       "cucumber-for-java"
       "gherkin"
@@ -53,7 +51,10 @@
       # "multi-project-workspace"
     ])
     jetbrains-toolbox
+    jdk21_headless
+    maven
     nodejs_22
+    xdg-utils
   ];
 
   programs.chromium = {
